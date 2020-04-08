@@ -64,10 +64,8 @@ p{
 	font-family: sans-serif;
 }
 
-.wrapper{
-	margin: 0 auto;
+section{
 	margin: 50px 25% 0 25%;
-	overflow-x: hidden;
 }
 
 table th, table td{
@@ -76,6 +74,11 @@ table th, table td{
 }
 
 /*classes*/
+.wrapper{
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
 .img{
 	width: 420px;
 	height: 240px;
