@@ -36,7 +36,7 @@ header{
 	z-index: -2;
 	left: 0;
 }
-
+/*
 header h2{
 	top:50%;
 	left:50%;
@@ -47,7 +47,7 @@ header h2{
 	color:white;
 	z-index: -1;
 }
-
+*/
 h3{
 	font-size: 2em;
 	text-align: center;
