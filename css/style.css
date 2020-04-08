@@ -30,11 +30,12 @@ header{
 	height: 600px;
 	width: 100%;
 	background:green;
-	/*background:linear-gradient(to top,#0984e3,transparent 50%),url(https://cdn.suwalls.com/wallpapers/animals/walrus-10140-1920x1200.jpg);*/
+	background:linear-gradient(to top,#0984e3,transparent 50%),url(https://cdn.suwalls.com/wallpapers/animals/walrus-10140-1920x1200.jpg);
 	bacrground-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	z-index: -2;
+	overflow: hidden;
 }
 
 header h2{
@@ -67,7 +68,6 @@ p{
 
 section{
 	margin: 50px 25% 0 25%;
-	
 }
 
 table th, table td{
