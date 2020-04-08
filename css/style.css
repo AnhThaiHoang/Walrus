@@ -240,14 +240,14 @@ ul.obsahList li:nth-child(3){
 }
 
 /*at rules*/
-@media(max-width: 1080px){
+@media only screen and (max-width: 1080px){
 	.img{
 		width: 380px;
 		height: 200px;
 	}
 }
 
-@media(max-width: 999px){
+@media only screen and (max-width: 999px){
 	.img{
 		width: 300px;
 		height: 180px;
@@ -259,7 +259,7 @@ ul.obsahList li:nth-child(3){
 	}
 }
 
-@media(max-width: 852px){
+@media only screen and (max-width: 852px){
 	.menuButton{
 		display:block;
 	}
