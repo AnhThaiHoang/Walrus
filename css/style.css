@@ -27,13 +27,14 @@ nav ul li a{
 
 header{
 	width: 100%;
-	/*position: relative;*/
+	position: relative;
 	height: 600px;
 	background:linear-gradient(to top,#0984e3,transparent 50%),url(https://cdn.suwalls.com/wallpapers/animals/walrus-10140-1920x1200.jpg);
 	bacrground-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	z-index: -2;
+	margin: 0 auto;
 }
 
 header h2{
