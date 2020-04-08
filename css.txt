@@ -1,0 +1,229 @@
+SELECTOR
+
+	selector: h2(jakykoliv element selector) < class < id < style (kdyz na html soubor pridas atribut "style")
+
+	Pseudoclass:
+		children:
+			:first-child  => vybere prvni element
+			:last-child   => vybere posledni element
+			:nth-child(n) => vybere n-ty element
+		
+		:link
+		:visited => pokud jsi klikl na odkaz
+		:hover 
+	
+	Pseudoselectors
+		::before => musi obsahovat v css "content", objevuje se pred obsahem elementu (ne pred elementem), neda se pouzivat u img
+		::after
+		
+		content: open-quote / close-quote => prida '"'
+		content: attr(nazevAtributu); => prida text atributu (<a nazevAtributu="tento text se prida pred obsahem">...</a>)
+
+	textarea ~ button => vybere "button" se stejnym rodici jako "textarea"
+	h2 + button       => vybere "button", co se objevuje pod "h2
+	ul > li           => vybere kazdy li pod ul
+	ul li             => vybere kazdy li a elementy pod li
+	
+	a[href] => vybere vsechny elemety "a" s atributem "href"
+	img[src="/img/dada.jpg"] => vybere jenom obrazek dada.jpg
+	img[src=*"/img/"]        => vybere vsechny obrazky ve slozce img
+	
+	
+	
+COLOR
+	color: #ffffff;
+		   rgb(255,255,255);
+		   #ffffff00;
+		   rgba(255,255,255,0.4); => alpha (0 - 1)
+	background: linear-gradient(to right, red, blue, rgb(255,255,255), rgba(255,255,255,0));
+				linear-gradient(to bottom right, red, green blue);
+				linear-gradient(160deg, red, green, blue);
+				radial-gradient(red, green, blue);
+				radial-gradient(red 20%, green 40%, blue 60%); => od nejmensi do nejvetsi
+				radial-gradient(circle, red 20%, green 40%, blue 60%);
+
+IMAGE
+	background: url("img/img.png");
+				url("obrazek.cz/neco.jpg");
+	background-size: cover;
+					 contain; => premeni velikost velikost aniz by znicil kvalitu obrazku
+					 100px(width) 50px(height);
+	background-repeat: no-repeat;
+
+UNITS
+	font-size:40cm;
+				px;
+				pt;
+				pc;
+				%;
+				em;
+				vw;
+				vh;
+
+TEXT MANIPULATION
+	text-decoration: none;         => vymaze vsechna dekorace
+					 underline;    => podtrhnout text
+					 line-through; => vytvori caru pres text
+					 overline;     => vytvori text nad text
+	text-transform: uppercase;  => premeni vsechna pismena na velka
+					capitalize; => premeni vsechna pismena na mala
+					lowercase;  => kazde slovo zacina velkym pismenem
+	text-align: center
+				justify => zarovna text do bloku
+
+FONT
+	font-weigh:90; => bold
+	font-style: none;
+				italic;
+				oblique;
+	font-family: "Times New Roman","Georgia",serif;
+
+LAYOUT
+	Box model
+		|-----------------------------------|
+		|             MARGIN                |
+		|  |-----------------------------|  |
+		|  |          BORDER             |  |
+		|  |  |-----------------------|  |  |
+		|  |  |      PADDING          |  |  |
+		|  |  |  |-----------------|  |  |  |
+		|  |  |  |    CONTENT      |  |  |  |
+		|  |  |  |-----------------|  |  |  |
+		|  |  |      PADDING          |  |  |
+		|  |  |-----------------------|  |  |
+		|  | 	  	  BORDER		     |  |
+		|  |-----------------------------|  |
+		|             MARGIN                |
+		|-----------------------------------|
+		
+		border:[size  style  color]
+		border:	2px   solid  red;
+					  dotted rgb(255,255,255);
+					  dashed
+					  double
+					  
+		padding:[top,right,bottom,left] => ve smeru hodin
+		
+		float: right;
+			    left;
+		
+		display: none;
+				 inline;
+				 block;
+				 inline-block;
+	
+	
+	
+	Flexbox
+		display: flex; => musi mit display flex, aby fungovaly prikazy dole
+		
+		flex-direction: column;
+						column-reverse;
+						row;
+						row-reverse;
+		
+		flex-wrap: wrap; => posle item dolu pokud se nevejde do sirky stranky
+				   nowrap;
+				   
+		//horizontalne		   
+		justify-content: center;
+						 flex-end;
+						 flex-start;
+						 space-between;
+						 space-around;
+		//vertilane				 
+		align-items: center;
+					 flex-end;
+					 flex-start;
+					 stretch;
+					 baseline;
+		
+		order: 1; => nastavi poradi itemu, zacina od 1
+		
+		flex-basis: 100px; => definuje min velikost itemu
+		flex-grow: 1; => default is 0
+		flex-shrink:3; => default is 1
+		flex:[grow shrink basis];
+		align-self: center;
+					flex-end;
+					flex-start;
+					
+	Grid
+		display: grid; => vyvolava grid
+		
+		grid-template-columns: 10px 50px auto; => column 3
+		
+		grid-template-rows: 50px 250px; => 2 rows
+		
+		justify-content: start;
+						 end;
+						 center;
+						 space-evenly;
+						 space-around;
+		
+		align-content: start;
+					   end;
+					   space-between;
+                       center;
+                       space-evenly;
+                       space-around;
+					   
+		grid-column-gap: 150px;
+		
+		grip-row-gap: 300px;
+		
+		grid-gap: [row column];
+		
+		grid-column: 1/span;
+		
+		grid-row: 1 /2;
+		
+		grid-area: [row-start / column-start/ row-end / column-end];
+	
+	
+TRANSITION PROPERTY
+	transition: background 300ms ease       1s;
+							     linear
+							     ease-in-out
+	
+	transform: translate(50px, 50px);
+			   scale(2.5);
+			   rotate(-90deg);
+			   skewX(45deg);
+			   skewY(45deg);
+					 [scaleX],[skewX],[skewY],[scaleY],[translateX],[translateY] 
+			   matrix(   1   , 0.45  ,  0.45 ,   1    ,     100,   ,    50);
+
+ANIMATION
+	@keyframes translate-element{
+		from{}
+		to{}
+	}
+	@keyframes ahahahahahahaha{
+		0%{
+		   background: red; 
+		   trainsform: translate(10px,10px);
+		   }
+		50%{}
+		100%{}
+	}
+	
+	animation-name: translate-element;
+	
+	animation-duration: 2s;
+	
+	animation-timing-function: ease;
+							   linear;
+							   ease-in;
+							   ease-in-out;
+							   
+	animation-delay: 2s;
+	animation-iteration-count: 2; => 2x animuje
+							   infinite;
+							   
+	animation-direction: normal;           => 0% - 100%
+						 reverse;          => 100% - 0%
+						 alternate;        => 0% - 100% - 0%
+						 altenate-reverse; => 100% - 0% - 100%
+						 
+	animation:[name duration timing-function delay iteration-count direction];
