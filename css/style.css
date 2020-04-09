@@ -93,6 +93,7 @@ table th, table td{
 	float:left;
 	margin-right: 20px;
 }
+
 .lovec{
 	margin-top: 20px;
 }
@@ -289,9 +290,22 @@ ul.obsahList li:nth-child(3){
 		font-size:20px;
 	}
 	
+	section{
+		margin: 50px 10% 0 10%;
+	}
+	
+	
 	ul.menu > li a:hover{
 		background: none;
 		color:#2ecc71;
+	}
+	
+	vpravo, vlevo, lovec{
+		float:none;
+	}
+	
+	.img{
+		margin: 0;
 	}
 	
 	#menuMini:checked ~ ul.menu{
@@ -308,6 +322,7 @@ ul.obsahList li:nth-child(3){
 	
 	.tableMobile th,.tableMobile td{
 		text-align: left;
+		font-size: 2em;
 	}
 	
 }
