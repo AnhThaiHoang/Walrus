@@ -300,7 +300,7 @@ ul.obsahList li:nth-child(3){
 		color:#2ecc71;
 	}
 	
-	vpravo, vlevo, lovec{
+	.vpravo, .vlevo, .lovec{
 		float:none;
 	}
 	
