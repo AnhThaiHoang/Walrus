@@ -291,7 +291,7 @@ ul.obsahList li:nth-child(3){
 	}
 	
 	section{
-		margin: 50px 10% 0 10%;
+		margin: 50px 10px 0 10px;
 	}
 	
 	
@@ -322,7 +322,6 @@ ul.obsahList li:nth-child(3){
 	
 	.tableMobile th,.tableMobile td{
 		text-align: left;
-		font-size: 2em;
 	}
 	
 }
