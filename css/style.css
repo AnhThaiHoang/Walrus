@@ -291,22 +291,14 @@ ul.obsahList li:nth-child(3){
 	}
 	
 	section{
-		margin: 50px 10px 0 10px;
+		margin: 50px 10% 30px 10%;
 	}
-	
 	
 	ul.menu > li a:hover{
 		background: none;
 		color:#2ecc71;
 	}
 	
-	.vpravo, .vlevo, .lovec{
-		float:none;
-	}
-	
-	.img{
-		margin: 0;
-	}
 	
 	#menuMini:checked ~ ul.menu{
 		left:0;
@@ -324,4 +316,18 @@ ul.obsahList li:nth-child(3){
 		text-align: left;
 	}
 	
+}
+
+@media only screen and (max-width: 500px){
+	.vpravo, .vlevo, .lovec{
+		float:none;
+	}
+	
+	.img{
+		margin: 0;
+	}
+	
+	section{
+		margin: 50px 10px 30px 10px;
+	}
 }
